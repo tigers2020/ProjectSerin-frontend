@@ -1,18 +1,28 @@
-// app/layout.tsx
-"use client"
+import {Inter} from "next/font/google";
+import "@/styles/styles.css";
+import Sidebar from "@/components/organisms/Sidebar"
 
-import './globals.css'
-import MultiColumnLayouts from '../components/layouts/MultiColumnLayouts'
+const inter = Inter({subsets: ["latin"]});
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" className="h-full bg-white">
-      <body className="h-full">
-        <MultiColumnLayouts />
-        <main className="lg:pl-72 xl:pl-96">
-          {children}
+export default function RootLayout({
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
+}>) {
+    return (
+        <html lang="en" data-theme={"dark"}>
+        <body className={inter.className}>
+        <main>
+            <div className="flex">
+                <div>
+                    <Sidebar/>
+                </div>
+                <div className="flex-1 p-4">
+                    {children}
+                </div>
+            </div>
         </main>
-      </body>
-    </html>
-  )
+        </body>
+        </html>
+    );
 }

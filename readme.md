@@ -1,51 +1,36 @@
-Certainly! Here's a revised version of the README.md to reflect that the project is currently under development:
-
----
-
-# Serin Frontend (Under Development)
-
-Welcome to the Serin frontend project repository! Serin is an open-source conversational AI system aimed at providing a dynamic and engaging user experience through natural language interactions.
-
-## Overview
-
-The Serin frontend is currently under active development. This project aims to create a responsive and intuitive user interface for interacting with the Serin conversational AI system. Stay tuned for updates as we work on implementing exciting features and improvements.
-
-## Features (Planned)
-
-- **Natural Language Interaction**: Engage in conversations with Serin using natural language inputs.
-- **Dynamic Responses**: Receive dynamic responses tailored to your queries and interactions.
-- **User-friendly Interface**: Enjoy a clean and intuitive user interface designed for seamless interaction.
-
-## Technologies Used
-
-- **React**: A popular JavaScript library for building user interfaces.
-- **Redux**: A predictable state container for managing application state.
-- **Styled Components**: Utilized for styling components with CSS.
-- **Axios**: Used for making HTTP requests to the backend server.
-- **WebSocket**: Enables real-time communication with the backend for dynamic updates.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-As the project is currently under development, there's no stable release available. However, if you're interested in contributing or exploring the codebase, you can follow these steps:
+First, run the development server:
 
-1. **Clone the Repository**: `git clone https://github.com/your-username/serin-frontend.git`
-2. **Install Dependencies**: `cd serin-frontend && npm install`
-3. **Start the Development Server**: `npm start`
-4. **Open the Application**: Visit `http://localhost:3000` in your web browser.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Contributing
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Contributions to the Serin frontend project are welcome! If you'd like to contribute to the development, please follow these guidelines:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Fork the repository and create a new branch for your feature or bug fix.
-- Ensure your code adheres to the project's coding standards and conventions.
-- Test your changes thoroughly and ensure they don't introduce any regressions.
-- Submit a pull request detailing the changes you've made and any relevant information.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## License
+## Learn More
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+To learn more about Next.js, take a look at the following resources:
 
-## Contact
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-For any inquiries or feedback regarding the Serin frontend project, feel free to contact us at [your-email@example.com](mailto:your-email@example.com).
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
