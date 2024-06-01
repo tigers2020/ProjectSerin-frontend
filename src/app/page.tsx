@@ -1,16 +1,19 @@
-"use client";
+import React from 'react';
+import Link from 'next/link';
 
-import useSocket from "@/app/useSocket";
-
-const HomePage = () => {
-  useSocket("http://localhost:3000");
-
-  return (
-    <>
-      <h2 className="text-2xl font-bold">Dashboard</h2>
-      <p>System Overview</p>
-    </>
-  );
+const Home: React.FC = () => {
+    return (
+        <div>
+            <h1>Home</h1>
+            <nav>
+                <ul>
+                    <li><Link href="/Account/Register/">Register</Link></li>
+                    <li><Link href="/Account/Login/">Login</Link></li>
+                    <li><Link href="/Account/Logout/">Logout</Link></li>
+                </ul>
+            </nav>
+        </div>
+    );
 };
 
-export default HomePage;
+export default Home;

@@ -1,6 +1,6 @@
 "use client";
 
-import useSocket from "@/app/useSocket";
+import useSocket from "@/data/useSocket";
 
 const HomePage = () => {
   useSocket("http://localhost:3000");

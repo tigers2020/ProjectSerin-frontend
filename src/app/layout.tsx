@@ -11,6 +11,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" data-theme={"dark"}>
+        <head>
+            <title>Project Serin</title>
+            <script src="http://localhost:3000"></script>
+
+        </head>
+
         <body className={inter.className}>
         <main>
             <div className="flex">

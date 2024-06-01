@@ -1,5 +1,5 @@
 "use client"
-import useSocket from "@/app/useSocket";
+import useSocket from "@/data/useSocket";
 import Layout from "@/app/layout";
 
 const UpdateHistory = () => {
