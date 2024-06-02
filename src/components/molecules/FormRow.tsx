@@ -7,12 +7,21 @@ type FormRowProps = {
     type: string;
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    required?: boolean;
+    placeholder?: string;
+
 };
 
-const FormRow: React.FC<FormRowProps> = ({ label, type, value, onChange }) => (
+const FormRow: React.FC<FormRowProps> = ({label, type, value, onChange, required, placeholder}) => (
     <div className="mb-4">
-        <Label>{label}</Label>
-        <Input type={type} value={value} onChange={onChange} />
+        <Label htmlFor={label}>{label}</Label>
+        <Input
+            type={type}
+            value={value}
+            onChange={onChange}
+            required={required}
+            placeholder={placeholder}
+        />
     </div>
 );
 

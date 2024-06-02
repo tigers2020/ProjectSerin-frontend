@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { registerUser } from '@/data/api';
+import RegisterForm from "@/components/organisms/RegisterForm"
 
 const Register: React.FC = () => {
     const [name, setName] = useState('');
@@ -18,36 +19,12 @@ const Register: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Email:
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Password:
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </label>
-            <button type="submit">Register</button>
-        </form>
+        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+            <div className="p-6 bg-white shadow-md rounded">
+                <h2 className="text-2xl font-bold mb-4">Login</h2>
+       <RegisterForm />
+            </div>
+        </div>
     );
 };
 

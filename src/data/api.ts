@@ -22,8 +22,24 @@ axiosInstance.interceptors.request.use((config) => {
     return Promise.reject(error);
 });
 
-export const registerUser = async (name: string, email: string, password: string) => {
-    return axiosInstance.post(`/users/`, { name, email, password });
+export const registerUser = async (name: string, email: string, password: string, avatar_url: string, persona: any) => {
+    try {
+        const response = await axiosInstance.post('/users', {
+            name,
+            email,
+            password,
+            avatar_url,
+            persona,
+        });
+
+        // 로그인 후 토큰을 저장
+        const loginResponse = await loginUser(email, password);
+        localStorage.setItem('token', loginResponse.data.access_token);
+
+        return response.data;
+    } catch (error) {
+        throw new Error('Failed to register user');
+    }
 };
 
 export const loginUser = async (email: string, password: string) => {
@@ -39,4 +55,23 @@ export const loginUser = async (email: string, password: string) => {
 
 export const logoutUser = () => {
     localStorage.removeItem('token');
+};
+
+export const fetchUser = async () => {
+    try {
+        const response = await axiosInstance.get('/users/me');
+        return response.data;
+    } catch (error) {
+        throw new Error('Failed to fetch user data');
+    }
+};
+export const updateUser = async (user: any) => {
+    try {
+        console.log('Updating user:', user);  // 디버그용 로그
+        const response = await axiosInstance.put('/users/me', user);
+        return response.data;
+    } catch (error) {
+        console.error('Failed to update user:', error);  // 디버그용 로그
+        throw new Error('Failed to update user');
+    }
 };

@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+import React from 'react';
+import AccountDetails from '@/components/organisms/AccountDetails';
+import AccountNav from '@/components/organisms/AccountNav';
+import UserProfilePage from "@/components/organisms/UserProfilePage";
 
-const UserProfilePage = () => {
-    useSocket("http://localhost:3000");
-
+const UserProfile: React.FC = () => {
     return (
-        <Layout>
-            <h2 className="text-2xl font-bold">User Profile</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
+        <div className="flex items-start justify-center min-h-screen bg-gray-100 p-6">
+            <div className="w-full max-w-md bg-white shadow-md rounded p-4">
+                <UserProfilePage />
+            </div>
+        </div>
     );
 };
 
-export default UserProfilePage;
+export default UserProfile;

@@ -1,4 +1,3 @@
-// components/organisms/Sidebar.tsx
 import { FC } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
@@ -12,7 +11,7 @@ const Sidebar: FC = () => {
         const IconComponent = item.icon;
 
         return item.subMenu ? (
-          <Disclosure as="div" key={index} className="mt-2" defaultOpen={true}>
+          <Disclosure as="div" key={index} className="mt-2" defaultOpen={false}>
             <DisclosureButton className="group flex w-full items-center justify-between p-2 text-left text-gray-700 hover:bg-gray-100">
               <div className="flex items-center">
                 <IconComponent className="w-5 h-5 mr-2" />

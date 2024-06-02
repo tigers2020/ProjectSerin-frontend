@@ -1,15 +1,13 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+import React from 'react';
+import UserProfilePage from "@/components/organisms/UserProfilePage";
 
-const AIProfile = () => {
-    useSocket("http://localhost:3000");
-
+const AIProfile: React.FC = () => {
     return (
-        <Layout>
-            <h2 className="text-2xl font-bold">AI Profile</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
+        <div className="flex items-start justify-center min-h-screen bg-gray-100 p-6">
+            <div className="w-full max-w-md bg-white shadow-md rounded p-4">
+                <UserProfilePage/>
+            </div>
+        </div>
     );
 };
 

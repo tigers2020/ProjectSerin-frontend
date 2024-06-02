@@ -7,7 +7,7 @@ const Home: React.FC = () => {
             <h1>Home</h1>
             <nav>
                 <ul>
-                    <li><Link href="/Account/Register/">Register</Link></li>
+                    <li><Link href="/Account/Register/">RegisterForm</Link></li>
                     <li><Link href="/Account/Login/">Login</Link></li>
                     <li><Link href="/Account/Logout/">Logout</Link></li>
                 </ul>
