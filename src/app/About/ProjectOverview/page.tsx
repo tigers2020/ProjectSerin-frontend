@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/About/ProjectOverview/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const ProjectOverview = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">Project Overview</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const ProjectOverviewPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Project Overview</h1>
+        <p>Explore the goals, achievements, and roadmap of Serin Zenith.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default ProjectOverview;
+export default ProjectOverviewPage;

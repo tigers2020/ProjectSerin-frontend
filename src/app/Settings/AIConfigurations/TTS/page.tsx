@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Settings/AIConfigurations/TTS/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const AIConfigurationsTTS = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">AI Configurations TTS</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const TTSSettingsPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Text-to-Speech Settings</h1>
+        <p>Configure text-to-speech options to enhance your AI interactions.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default AIConfigurationsTTS;
+export default TTSSettingsPage;

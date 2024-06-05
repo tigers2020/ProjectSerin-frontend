@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Settings/AIConfigurations/Character/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const AIConfigurationsCharacter = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">AI Configurations Character</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const CharacterSettingsPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">AI Character Settings</h1>
+        <p>Customize the characteristics and behaviors of your AI characters here.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default AIConfigurationsCharacter;
+export default CharacterSettingsPage;

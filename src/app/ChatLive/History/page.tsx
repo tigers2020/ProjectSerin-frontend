@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/ChatLive/History/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const History = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">History</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const HistoryPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Chat History</h1>
+        <p>Review your past conversations here.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default History;
+export default HistoryPage;

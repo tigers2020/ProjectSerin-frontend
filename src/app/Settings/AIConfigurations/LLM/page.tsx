@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Settings/AIConfigurations/LLM/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const AIConfigurationsLLM = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">AI Configurations LLM</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const LLMSettingsPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Language Model Settings</h1>
+        <p>Adjust the settings for the language models used in your AI interactions.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default AIConfigurationsLLM;
+export default LLMSettingsPage;

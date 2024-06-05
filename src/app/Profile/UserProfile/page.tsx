@@ -1,16 +1,16 @@
+// path/src/app/Profile/AIProfile/page.tsx
 import React from 'react';
-import AccountDetails from '@/components/organisms/AccountDetails';
-import AccountNav from '@/components/organisms/AccountNav';
-import UserProfilePage from "@/components/organisms/UserProfilePage";
+import { RootLayout } from '@app/Layout';
 
-const UserProfile: React.FC = () => {
-    return (
-        <div className="flex items-start justify-center min-h-screen bg-gray-100 p-6">
-            <div className="w-full max-w-md bg-white shadow-md rounded p-4">
-                <UserProfilePage />
-            </div>
-        </div>
-    );
+const AIProfilePage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">AI Profile</h1>
+        <p>Manage and view the profiles of AI characters.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default UserProfile;
+export default AIProfilePage;

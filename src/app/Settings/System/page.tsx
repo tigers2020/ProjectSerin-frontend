@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Settings/System/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const System = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">System Configuration</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const SystemSettingsPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">System Settings</h1>
+        <p>Manage system-level settings and configurations here.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default System;
+export default SystemSettingsPage;

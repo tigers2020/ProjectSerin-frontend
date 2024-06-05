@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Settings/UserPreferences/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const UserPreference = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">UserPreference</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const UserPreferencesPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">User Preferences</h1>
+        <p>Personalize your experience by setting user preferences here.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default UserPreference;
+export default UserPreferencesPage;

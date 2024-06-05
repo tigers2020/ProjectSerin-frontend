@@ -1,26 +1,16 @@
-"use client"
-import {useEffect} from 'react';
-import {useRouter} from 'next/navigation';
-import useSocket from '@/data/useSocket';
+// path/src/app/ChatLive/Live/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const Live = () => {
-    const router = useRouter();
-
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            router.push('/Account/Login'); // 로그인 화면으로 리다이렉트
-        }
-    }, [router]);
-
-    useSocket(process.env.NEXT_PUBLIC_SOCKET_SERVER_URL || '');
-
-    return (
-        <div>
-            <h2 className="text-2xl font-bold">Live</h2>
-            <p>Details about the user profile.</p>
-        </div>
-    );
+const LiveChatPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Live Chat</h1>
+        <p>Engage in real-time conversations with AI or other users.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default Live;
+export default LiveChatPage;

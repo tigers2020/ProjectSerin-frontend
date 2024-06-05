@@ -1,15 +1,16 @@
+// path/src/app/Account/Login/page.tsx
 import React from 'react';
-import LoginForm from '@/components/organisms/LoginForm';
+import { RootLayout } from '@app/Layout';
 
-const LoginPage: React.FC = () => {
-    return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="p-6 bg-white shadow-md rounded">
-                <h2 className="text-2xl font-bold mb-4">Login</h2>
-                <LoginForm />
-            </div>
-        </div>
-    );
+const LoginPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Login</h1>
+        <p>Access your account by logging in.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
 export default LoginPage;

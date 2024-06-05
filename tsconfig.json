@@ -23,8 +23,23 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@atoms/*": [
+        "src/components/atoms/*"
+      ],
+      "@molecules/*": [
+        "src/components/molecules/*"
+      ],
+      "@organisms/*": [
+        "src/components/organisms/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
       ]
     },
     "incremental": true

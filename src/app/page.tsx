@@ -1,19 +1,16 @@
+// path/src/app/page.tsx
 import React from 'react';
-import Link from 'next/link';
+import {RootLayout} from '@app/Layout';
 
-const Home: React.FC = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-            <nav>
-                <ul>
-                    <li><Link href="/Account/Register/">RegisterForm</Link></li>
-                    <li><Link href="/Account/Login/">Login</Link></li>
-                    <li><Link href="/Account/Logout/">Logout</Link></li>
-                </ul>
-            </nav>
-        </div>
-    );
+const Home = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Welcome to Serin Zenith</h1>
+        <p>Explore the features and capabilities of our platform.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
 export default Home;

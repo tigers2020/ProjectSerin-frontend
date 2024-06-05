@@ -1,14 +1,16 @@
-"use client"
+// path/src/app/Account/Logout/page.tsx
 import React from 'react';
-import { logoutUser } from '@/data/api';
+import { RootLayout } from '@app/Layout';
 
-const Logout: React.FC = () => {
-    const handleLogout = () => {
-        logoutUser();
-        alert('Logout successful.');
-    };
-
-    return <button onClick={handleLogout}>Logout</button>;
+const LogoutPage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Logout</h1>
+        <p>You have been logged out.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default Logout;
+export default LogoutPage;

@@ -1,16 +1,16 @@
-"use client"
-import useSocket from "@/data/useSocket";
-import Layout from "@/app/layout";
+// path/src/app/Help/UserGuide/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
-const UserGuide = () => {
-    useSocket("http://localhost:3000");
-
-    return (
-        <Layout>
-            <h2 className="text-2xl font-bold">User Guide</h2>
-            <p>Details about the user profile.</p>
-        </Layout>
-    );
+const UserGuidePage = () => {
+  return (
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">User Guide</h1>
+        <p>Get detailed instructions on how to use the features of Serin Zenith.</p>
+      </div>
+    </RootLayout>
+  );
 };
 
-export default UserGuide;
+export default UserGuidePage;

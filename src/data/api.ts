@@ -22,24 +22,41 @@ axiosInstance.interceptors.request.use((config) => {
     return Promise.reject(error);
 });
 
-export const registerUser = async (name: string, email: string, password: string, avatar_url: string, persona: any) => {
-    try {
-        const response = await axiosInstance.post('/users', {
-            name,
-            email,
-            password,
-            avatar_url,
-            persona,
-        });
+export const registerUser = async (
+  name: string,
+  email: string,
+  password: string,
+  avatar_url?: string,
+  persona?: Persona
+): Promise<UserResponse> => {
+  try {
+    const userObj = {
+      name,
+      email,
+      password,
+      avatar_url,
+      persona,
+    };
 
-        // 로그인 후 토큰을 저장
-        const loginResponse = await loginUser(email, password);
-        localStorage.setItem('token', loginResponse.data.access_token);
+    const response = await axios.post<UserResponse>('/users', userUserObj);
+    const loginResponse = await loginUser(email, password);
 
-        return response.data;
-    } catch (error) {
-        throw new Error('Failed to register user');
+    // Instead of localStorage, consider using cookies with httpOnly flag
+    document.cookie = `token=${loginResponse.data.access_token};path=/;secure;httpOnly`;
+
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+
+    // Throw or handle more specific AxiosError
+    if (axiosError.response) {
+      console.error(`Registration failed with status: ${axiosError.response.status}`);
+      throw new Error(`Failed to register user: ${axiosError.response.statusText}`);
+    } else {
+      console.error(axiosError.message);
+      throw new Error(`Failed to register user: ${axiosError.message}`);
     }
+  }
 };
 
 export const loginUser = async (email: string, password: string) => {

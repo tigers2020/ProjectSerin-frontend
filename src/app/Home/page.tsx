@@ -1,15 +1,15 @@
-"use client";
-
-import useSocket from "@/data/useSocket";
+// path/src/app/Home/page.tsx
+import React from 'react';
+import { RootLayout } from '@app/Layout';
 
 const HomePage = () => {
-  useSocket("http://localhost:3000");
-
   return (
-    <>
-      <h2 className="text-2xl font-bold">Dashboard</h2>
-      <p>System Overview</p>
-    </>
+    <RootLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold">Welcome to Serin Zenith</h1>
+        <p>Explore the features and capabilities of our platform.</p>
+      </div>
+    </RootLayout>
   );
 };
 
